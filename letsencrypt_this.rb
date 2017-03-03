@@ -20,10 +20,10 @@ end
 
 endpoint = if ['test', 'staging'].include?(opts['-m'])
              puts 'test/staging mode'
-             'https://acme-v01.api.letsencrypt.org/'
+             'https://acme-staging.api.letsencrypt.org/'
            else
              puts 'live mode'
-             'https://acme-staging.api.letsencrypt.org/'
+             'https://acme-v01.api.letsencrypt.org/'
            end
 
 domain = opts['-d']
