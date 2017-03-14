@@ -100,7 +100,7 @@ puts
 print 'checking from local '
 
 loop do
-  response = `curl -sL '#{domain}/#{challenge.filename}'` # TODO: exchange with pure ruby solution
+  response = `curl -skL '#{domain}/#{challenge.filename}'` # TODO: exchange with pure ruby solution
   result = response.strip == challenge.file_content.strip
   if result
     puts 'FOUND!'
